@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, Flex, Text, useColorMode, IconButton, Button, useDisclosure,Divider,ColorMode } from "@chakra-ui/react";
+import { Box, Heading, Flex, Text, useColorMode, IconButton, Button, useDisclosure,Divider,Grid, GridItem ,Spacer} from "@chakra-ui/react";
 import {
     Modal,
     ModalOverlay,
@@ -21,42 +21,48 @@ const Header: React.FC = props => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <>
-        <Flex
-            as="header"
-            align="center"
-            position="fixed"
-            zIndex="9999"
-            justify="space-between"
-            wrap="wrap"
-            padding="1.5rem"
-            width="full"
-            bg={colorMode === "light" ? "white" : "gray.800"}
-            color={colorMode === "light" ? "black" : "white"}
-            {...props}
-        >
-            <Flex align="center" mr={5}>
-                <Heading as="h1" size="md" letterSpacing={"-.0.01rem"} fontSize={{ base :"10", md:"xl", sm:"xl", lg:"xl"}}>
-                    <Link href="/">Dipunkkk</Link>
-                </Heading>
-            </Flex>
-
-            <Box
-                display={{ base: "none", md:"flex" }}
-                mt={{ base: 4, md: 0 }}
-                alignContent="center"
+            <Flex
+                as="header"
+                align="center"
+                position="fixed"
+                zIndex="9999"
+                // justify="space-between"
+                // wrap="wrap"
+                padding="1.5rem"
+                width="full"
+                bg={colorMode === "light" ? "white" : "gray.800"}
+                color={colorMode === "light" ? "black" : "white"}
+                {...props}
             >
-                <MenuItems><Link href="/blog">About</Link></MenuItems>
-                <MenuItems><Link href="/work">Achievement</Link></MenuItems>
-                <MenuItems><Link href="/experience">Experience</Link></MenuItems>
-                <MenuItems><Link href="/collections">Songs</Link></MenuItems>
-                <IconButton size="xs" bg="transparent" icon={colorMode === "light" ? <MoonIcon /> : <SunIcon/>} onClick={toggleColorMode} aria-label="button"/>
-            </Box>
-            <Box display={{ base: "block", md: "none",lg: "none" }}>
-                <IconButton size="xs" bg="transparent" icon={colorMode === "light" ? <MoonIcon /> : <SunIcon/>} onClick={toggleColorMode} aria-label="button"/>
-                <Button size="xs" bg="transparent" onClick={onOpen}>👋</Button>
-            </Box>
-        </Flex>
-        <Modal
+                <Flex align="center" mr={5}>
+                    <Heading as="h1" size="md" letterSpacing={"-.0.01rem"} fontSize={{ base :"10", md:"xl", sm:"xl", lg:"xl"}}>
+                        <Link href="/">Dipunkkk</Link>
+                    </Heading>
+                </Flex>
+                <Spacer />
+                <Box
+                    display={{ base: "none", md:"flex" }}
+                    mt={{ base: 4, md: 0 }}
+                >
+                    <MenuItems><Link href="/blog">About</Link></MenuItems>
+                    <MenuItems><Link href="/work">Achievement</Link></MenuItems>
+                    <MenuItems><Link href="/experience">Experience</Link></MenuItems>
+                    <MenuItems><Link href="/collections">Songs</Link></MenuItems>
+                </Box>
+                <Spacer />
+                <Box
+                    display={{ base: "none", md:"flex" }}
+                    mt={{ base: 4, md: 0 }}
+                    alignContent="center"
+                >
+                    <IconButton size="xs" bg="transparent" icon={colorMode === "light" ? <MoonIcon /> : <SunIcon/>} onClick={toggleColorMode} aria-label="button"/>
+                </Box>
+                <Box display={{ base: "block", md: "none",lg: "none" }}>
+                    <IconButton size="xs" bg="transparent" icon={colorMode === "light" ? <MoonIcon /> : <SunIcon/>} onClick={toggleColorMode} aria-label="button"/>
+                    <Button size="xs" bg="transparent" onClick={onOpen}>👋</Button>
+                </Box>
+            </Flex>
+            <Modal
             isCentered
             onClose={onClose}
             isOpen={isOpen}
