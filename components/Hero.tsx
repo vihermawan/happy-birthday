@@ -1,6 +1,7 @@
 import * as React from "react";
 import Fade from 'react-reveal/Fade';
-import { Container, Box, Heading, Grid, Text, GridItem,forwardRef } from "@chakra-ui/react";
+import style from '../styles/Hero.module.css';
+import { Container, Box, Heading, Grid, Text, GridItem,Link } from "@chakra-ui/react";
 
 const Hero: React.FC = ({}) => {
     return (
@@ -8,8 +9,8 @@ const Hero: React.FC = ({}) => {
             <Container maxW="7xl" paddingTop={{ base :"7", md:"20", lg:"40"}} paddingLeft={{ base :"7", md:"20", lg:"15"}} paddingRight={{ base :"7", md:"20", lg:"15"}} paddingBottom={{ base :"20"}}>
                 <Fade duration={500} distance="30px" fraction={0.4} bottom>
                     <Box mt={{base:"44", md:"28", lg:"0"}}>
-                        <Heading as="h1" letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base :"xl", md:"3xl", sm:"xl", lg:"7xl"}}>
-                            Today is your day, so be happy and grateful. Happy Birthday for you Dipung !
+                        <Heading as="h1" letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base :"2xl", md:"3xl", sm:"xl", lg:"7xl"}}>
+                            Today is your day, so be happy and grateful 🎉<br/> <Link className={style.transition} bgClip="text">Happy Birthday Dipung !</Link> 
                         </Heading>
                     </Box>
                 </Fade>

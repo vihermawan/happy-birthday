@@ -1,6 +1,6 @@
 import { extendTheme, ColorMode } from "@chakra-ui/react"
 
-export interface ChakraConfig {
+interface ChakraConfig {
   initialColorMode: ColorMode,
   useSystemColorMode: boolean,
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, Flex, Text, useColorMode, IconButton, Button, useDisclosure,Divider,Grid, GridItem ,Spacer} from "@chakra-ui/react";
+import { Box, Heading, Flex, Text, useColorMode, IconButton, Button, useDisclosure,Divider,Spacer} from "@chakra-ui/react";
 import {
     Modal,
     ModalOverlay,
@@ -11,9 +11,9 @@ import Link from 'next/link';
 
 
 const MenuItems: React.FC = ({ children }) => (
-  <Text mt={{ base: 5, md: 0 }} mr={6} display="block">
+  <Button mt={{ base: 5, md: 0 }} mr={6} display="block" size="xs" backgroundColor="transparent">
     {children}
-  </Text>
+  </Button>
 );
 
 const Header: React.FC = props => {
@@ -26,8 +26,6 @@ const Header: React.FC = props => {
                 align="center"
                 position="fixed"
                 zIndex="9999"
-                // justify="space-between"
-                // wrap="wrap"
                 padding="1.5rem"
                 width="full"
                 bg={colorMode === "light" ? "white" : "gray.800"}
