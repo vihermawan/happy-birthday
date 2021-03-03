@@ -1,9 +1,43 @@
 import * as React from 'react';
 import Fade from 'react-reveal/Fade';
 import style from '../styles/Hero.module.css';
-import { Container, Box, Heading, Grid, Text, GridItem,Link } from "@chakra-ui/react";
+import useSound from 'use-sound';
+import { GiPartyPopper } from 'react-icons/gi';
+import { 
+    Container, 
+    Box, 
+    Heading, 
+    Grid, 
+    Text, 
+    GridItem,
+    Link,
+    Button,
+    useDisclosure,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton, 
+    FormControl,
+    FormLabel,
+    Input
+} from "@chakra-ui/react";
 
 const Hero: React.FC = ({}) => {
+    const initialRef = React.useRef()
+    const finalRef = React.useRef()
+
+    const [play, { stop, isPlaying }] = useSound("/sounds/pop.mp3");
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const [wish,setWish] = React.useState<String>("");
+  
+    const openModal = () => {
+        play();
+        onOpen();
+    }
+
     return (
         <>
             <Container maxW="7xl" paddingTop={{ base :"7", md:"20", lg:"40"}} paddingLeft={{ base :"7", md:"20", lg:"15"}} paddingRight={{ base :"7", md:"20", lg:"15"}} paddingBottom={{ base :"20"}}>
@@ -34,10 +68,40 @@ const Hero: React.FC = ({}) => {
                                     So, on this day of your birthday, there have been many of your trips to this point and I am proud of those things, you have managed to go through a lot and grow well.
                                 </Text>
                             </GridItem>
+                            <GridItem colSpan={5} width="full">
+                                <Button colorScheme="facebook" leftIcon={ <GiPartyPopper/>} onClick={() =>openModal()}>
+                                    Make a Wish
+                                </Button>
+                            </GridItem>
                         </Grid>
                     </Box>
                 </Fade>
             </Container>
+            <Modal
+                initialFocusRef={initialRef}
+                finalFocusRef={finalRef}
+                isOpen={isOpen}
+                onClose={onClose}
+                isCentered
+            >
+                <ModalOverlay />
+                <ModalContent>
+                    <ModalHeader>Let's write your whish 🎁</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody pb={6}>
+                        <FormControl>
+                        <FormLabel>Your Whish</FormLabel>
+                            <Input ref={initialRef} placeholder="write here..." onChange={(e) => setWish(e.target.value)}/>
+                        </FormControl>
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button colorScheme="blue" mr={3} onClick={onClose}>
+                            Create
+                        </Button>
+                        <Button onClick={onClose}>Cancel</Button>
+                    </ModalFooter>
+                </ModalContent>
+            </Modal>
         </>
     );
 }
