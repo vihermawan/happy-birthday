@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
 import { Box, Heading, Flex, Text, useColorMode, IconButton, Button, useDisclosure,Divider,Spacer} from "@chakra-ui/react";
 import {
     Modal,
@@ -6,6 +6,7 @@ import {
     ModalContent,
     ModalBody,
   } from "@chakra-ui/react"
+import { Link as LinkScroll } from "react-scroll";
 import { SunIcon, MoonIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
 
@@ -19,6 +20,12 @@ const MenuItems: React.FC = ({ children }) => (
 const Header: React.FC = props => {
     const { colorMode, toggleColorMode } = useColorMode()
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const [scrollActive, setScrollActive] = useState<Boolean>(false);
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScrollActive(window.scrollY > 20);
+        });
+    }, []);
     return (
         <>
             <Flex
@@ -42,10 +49,20 @@ const Header: React.FC = props => {
                     display={{ base: "none", md:"flex" }}
                     mt={{ base: 4, md: 0 }}
                 >
-                    <MenuItems><Link href="/blog">About</Link></MenuItems>
-                    <MenuItems><Link href="/work">Achievement</Link></MenuItems>
-                    <MenuItems><Link href="/experience">Experience</Link></MenuItems>
-                    <MenuItems><Link href="/collections">Songs</Link></MenuItems>
+                    <MenuItems>
+                        <LinkScroll
+                            activeClass="active"
+                            to="prolouge"
+                            spy={true}
+                            smooth={true}
+                            duration={1000}
+                        >
+                            Prolouge
+                        </LinkScroll>
+                    </MenuItems>
+                    <MenuItems>Achievement</MenuItems>
+                    <MenuItems>Experience</MenuItems>
+                    <MenuItems>Songs</MenuItems>
                 </Box>
                 <Spacer />
                 <Box
@@ -61,12 +78,12 @@ const Header: React.FC = props => {
                 </Box>
             </Flex>
             <Modal
-            isCentered
-            onClose={onClose}
-            isOpen={isOpen}
-            size="xs"
-            motionPreset="slideInBottom"
-        >
+                isCentered
+                onClose={onClose}
+                isOpen={isOpen}
+                size="xs"
+                motionPreset="slideInBottom"
+            >
             <ModalOverlay />
             <ModalContent>
                     <ModalBody>

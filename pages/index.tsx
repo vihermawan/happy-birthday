@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Layout from "../components/Layout/Layout";
 import Hero from "../components/Hero";
-import About from "../components/About";
+import Prolouge from "../components/Prolouge";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
       <Layout>
         <Hero />
-        <About />
+        <Prolouge />
       </Layout>
     </>
   )

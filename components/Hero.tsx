@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import Fade from 'react-reveal/Fade';
 import style from '../styles/Hero.module.css';
 import { Container, Box, Heading, Grid, Text, GridItem,Link } from "@chakra-ui/react";
