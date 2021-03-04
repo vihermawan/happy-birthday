@@ -2,6 +2,7 @@ import * as React from 'react';
 import Fade from 'react-reveal/Fade';
 import style from '../styles/Hero.module.css';
 import useSound from 'use-sound';
+import Image from "next/image";
 import { GiPartyPopper } from 'react-icons/gi';
 import { 
     Container, 
@@ -12,30 +13,39 @@ import {
     GridItem,
     Link,
     Button,
-    useDisclosure,
     Modal,
     ModalOverlay,
     ModalContent,
     ModalHeader,
-    ModalFooter,
     ModalBody,
     ModalCloseButton, 
     FormControl,
     FormLabel,
-    Input
+    Input,
+    FormErrorMessage
 } from "@chakra-ui/react";
+import { Formik,Form,Field } from 'formik';
 
 const Hero: React.FC = ({}) => {
     const initialRef = React.useRef()
     const finalRef = React.useRef()
 
     const [play, { stop, isPlaying }] = useSound("/sounds/pop.mp3");
-    const { isOpen, onOpen, onClose } = useDisclosure();
+    const [isOpen, setOpen] = React.useState<boolean>(false);
+    const [isGift, setGift] =  React.useState<boolean>(false);
     const [wish,setWish] = React.useState<String>("");
   
     const openModal = () => {
         play();
-        onOpen();
+        setOpen(true);
+    }
+
+    const validateName =(value: string)=> {
+        let error: string
+        if (!value) {
+          error = "Please write your wish :)"
+        }
+        return error
     }
 
     return (
@@ -69,7 +79,7 @@ const Hero: React.FC = ({}) => {
                                 </Text>
                             </GridItem>
                             <GridItem colSpan={5} width="full">
-                                <Button colorScheme="facebook" leftIcon={ <GiPartyPopper/>} onClick={() =>openModal()}>
+                                <Button colorScheme="facebook" leftIcon={ <GiPartyPopper/>} onClick={() =>openModal()} size="sm">
                                     Make a Wish
                                 </Button>
                             </GridItem>
@@ -81,25 +91,106 @@ const Hero: React.FC = ({}) => {
                 initialFocusRef={initialRef}
                 finalFocusRef={finalRef}
                 isOpen={isOpen}
-                onClose={onClose}
+                onClose={()=>setOpen(false)}
+                size="sm"
                 isCentered
+                motionPreset="slideInBottom"
             >
                 <ModalOverlay />
                 <ModalContent>
                     <ModalHeader>Let's write your whish 🎁</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody pb={6}>
-                        <FormControl>
-                        <FormLabel>Your Whish</FormLabel>
-                            <Input ref={initialRef} placeholder="write here..." onChange={(e) => setWish(e.target.value)}/>
-                        </FormControl>
+                        <Formik
+                            initialValues={{ wish: "" }}
+                            onSubmit={(values, actions) => {
+                                setWish(values.wish)
+                                play();
+                                setOpen(false);
+                                setGift(true);
+                            }}
+                        >
+                        {(props) => (
+                             <Form>
+                             <Field name="wish" validate={validateName}>
+                               {({ field, form }) => (
+                                 <FormControl isInvalid={form.errors.wish && form.touched.wish}>
+                                   <FormLabel htmlFor="wish">Your Whish</FormLabel>
+                                   <Input {...field} id="wish" placeholder="write here..." />
+                                   <FormErrorMessage>{form.errors.wish}</FormErrorMessage>
+                                 </FormControl>
+                               )}
+                             </Field>
+                             <Button
+                               mt={4}
+                               colorScheme="teal"
+                               isLoading={props.isSubmitting}
+                               size="sm"
+                               type="submit"
+                             >
+                               Make
+                             </Button>
+                           </Form>
+                         )}
+                        </Formik>
                     </ModalBody>
-                    <ModalFooter>
-                        <Button colorScheme="blue" mr={3} onClick={onClose}>
-                            Create
-                        </Button>
-                        <Button onClick={onClose}>Cancel</Button>
-                    </ModalFooter>
+                </ModalContent>
+            </Modal>
+            <Modal
+                initialFocusRef={initialRef}
+                finalFocusRef={finalRef}
+                isOpen={isGift}
+                onClose={()=>setGift(false)}
+                size="md"
+                isCentered
+                motionPreset="scale"
+            >
+                <ModalOverlay />
+                <ModalContent>
+                    <ModalHeader textAlign="center">Your Wish 🥳</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody pb={6}>
+                        <Box>
+                        <Grid
+                            h="full"
+                            width="full"
+                            templateRows="repeat(1, 1fr)"
+                            templateColumns="repeat(5, 1fr)"
+                            gap={{base :1, md:4}}
+                        >
+                            <GridItem colSpan={{base :5, md:1, lg:2}} width="full" height="full">
+                                <Box display={{base:'none',sm:'none',md:'block',lg:'block'}}>
+                                    <Image
+                                        src="/images/dipung.svg"
+                                        alt=""
+                                        quality={100}
+                                        width={550}
+                                        height={550}
+                                        layout="responsive"
+                                    />
+                                </Box>
+                                <Box display={{base:'block',sm:'block',md:'none',lg:'none'}}>
+                                    <Image
+                                        src="/images/dipung.svg"
+                                        alt=""
+                                        quality={100}
+                                        width={200}
+                                        height={100}
+                                        layout="responsive"
+                                    />
+                                </Box>
+                            </GridItem>
+                            <GridItem colSpan={{base :5, md:4, lg:3}} width="full">
+                                <Text letterSpacing={"-.0.01rem"} lineHeight={"-.0.001rem"} textAlign={{base :"center", md:"justify", lg:"justify"}} fontSize={{ base :"small", md:"md", lg:"md"}}>
+                                    {wish}
+                                </Text>
+                                <Text letterSpacing={"-.0.01rem"} lineHeight={"-.0.001rem"} textAlign={{base :"center", md:"justify", lg:"justify"}} fontSize="small">
+                                    <Text as="i">hope your hope and wishes can be granted by God</Text>  🤲
+                                </Text>
+                            </GridItem>
+                        </Grid>
+                        </Box>
+                    </ModalBody>
                 </ModalContent>
             </Modal>
         </>
