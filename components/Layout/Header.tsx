@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from "react";
-import { Box, Heading, Flex, Text, useColorMode, IconButton, Button, useDisclosure,Divider,Spacer} from "@chakra-ui/react";
+import { Box, Heading, Flex, Text, useColorMode, IconButton, Button, useDisclosure,Divider,Spacer,Kbd } from '@chakra-ui/react';
 import {
     Modal,
     ModalOverlay,
@@ -9,7 +9,6 @@ import {
 import { Link as LinkScroll } from "react-scroll";
 import { SunIcon, MoonIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
-
 
 const MenuItems: React.FC = ({ children }) => (
   <Button mt={{ base: 5, md: 0 }} mr={6} display="block" size="xs" backgroundColor="transparent">
@@ -86,23 +85,48 @@ const Header: React.FC = props => {
             >
             <ModalOverlay />
             <ModalContent>
-                    <ModalBody>
-                        <Button colorScheme="transparent" variant="solid" size="xs" color={colorMode === "light" ? "black" : "white"} isFullWidth={true} >
-                            <Text color="black"><Link href="/blog">🙌 Blog</Link></Text>
-                        </Button>
+                <ModalBody>
+                    <Flex
+                        align="center"
+                        width="full"
+                        wrap="wrap"
+                        heigth
+                        bg={colorMode === "light" ? "white" : "gray.800"}
+                        color={colorMode === "light" ? "black" : "white"}
+                    >
+                         <LinkScroll
+                            activeClass="active"
+                            to="prolouge"
+                            spy={true}
+                            smooth={true}
+                            duration={1000}
+                        >
+                        <Box as="button" textAlign="left" w="full" display="flex" h="min-content" paddingY="1" justifyContent="center">
+                            <Text color="black" fontSize="xs" paddingX="1" fontWeight="bold"> Prolouge</Text> 
+                            <Spacer />
+                            <Kbd marginRight="1">D</Kbd>
+                        </Box>
+                        </LinkScroll>
                         <Divider />
-                        <Button colorScheme="transparent" variant="solid" size="xs" color={colorMode === "light" ? "black" : "white"} w="full">
-                            <Text color="black"><Link href="/work">🤝 Work</Link></Text>
-                        </Button>
+                        <Box as="button" textAlign="left" w="full" display="flex" h="min-content" paddingY="1" justifyContent="center">
+                            <Text color="black" fontSize="xs" paddingX="1" fontWeight="bold"> Achievement</Text> 
+                            <Spacer />
+                            <Kbd marginRight="1">P</Kbd>
+                        </Box>
                         <Divider />
-                        <Button colorScheme="transparent" variant="solid" size="xs" color={colorMode === "light" ? "black" : "white"} w="full">
-                            <Text color="black"><Link href="/experience">🎓 Experince</Link></Text>
-                        </Button>
+                        <Box as="button" textAlign="left" w="full" display="flex" h="min-content" paddingY="1" justifyContent="center">
+                            <Text color="black" fontSize="xs" paddingX="1" fontWeight="bold"> Experience</Text> 
+                            <Spacer />
+                            <Kbd marginRight="1">N</Kbd>
+                        </Box>
                         <Divider />
-                        <Button colorScheme="transparent" variant="solid" size="xs" color={colorMode === "light" ? "black" : "white"} w="full">
-                            <Text color="black"><Link href="/collections">✌️ Collections</Link></Text>
-                        </Button>
-                    </ModalBody>
+                        <Box as="button" textAlign="left" w="full" display="flex" h="min-content" paddingY="1" justifyContent="center">
+                            <Text color="black" fontSize="xs" paddingX="1" fontWeight="bold"> Songs</Text> 
+                            <Spacer />
+                            <Kbd marginRight="1">G</Kbd>
+                        </Box>
+                    </Flex>
+                </ModalBody>
             </ModalContent>
         </Modal>
         </>
