@@ -60,7 +60,7 @@ const Header: React.FC = props => {
                         </LinkScroll>
                     </MenuItems>
                     <MenuItems>Achievement</MenuItems>
-                    <MenuItems>Experience</MenuItems>
+                    <MenuItems>Gallery</MenuItems>
                     <MenuItems>Songs</MenuItems>
                 </Box>
                 <Spacer />
@@ -115,7 +115,7 @@ const Header: React.FC = props => {
                         </Box>
                         <Divider />
                         <Box as="button" textAlign="left" w="full" display="flex" h="min-content" paddingY="1" justifyContent="center">
-                            <Text color="black" fontSize="xs" paddingX="1" fontWeight="bold"> Experience</Text> 
+                            <Text color="black" fontSize="xs" paddingX="1" fontWeight="bold"> Gallery</Text> 
                             <Spacer />
                             <Kbd marginRight="1">N</Kbd>
                         </Box>

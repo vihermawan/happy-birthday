@@ -3,6 +3,8 @@ import Layout from "../components/Layout/Layout";
 import Hero from "../components/Hero";
 import Prolouge from "../components/Prolouge";
 import Achievement from "../components/Achievement";
+import Gallery from "../components/Gallery";
+import Song from "../components/Song";
 
 export default function Home() {
   return (
@@ -14,7 +16,9 @@ export default function Home() {
       <Layout>
         <Hero />
         <Prolouge />
-        <Achievement/>
+        <Achievement />
+        <Gallery />
+        {/* <Song /> */}
       </Layout>
     </>
   )

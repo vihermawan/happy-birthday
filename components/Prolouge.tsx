@@ -61,7 +61,6 @@ const Prologue: React.FC = ({}) => {
                         <Fade duration={500} distance="30px" delay={320} fraction={0.4} bottom>
                             <MotionBox
                                 boxSize="100%"
-                                drag="x"
                                 whileHover={{ y:"-10px" }}
                             >
                                 <Image
@@ -71,6 +70,8 @@ const Prologue: React.FC = ({}) => {
                                     objectFit="cover"
                                     borderRadius="md"
                                     cursor="pointer"
+                                    width="full"
+                                    height="full"
                                 />
                             </MotionBox>
                         </Fade>
@@ -84,7 +85,6 @@ const Prologue: React.FC = ({}) => {
                         <Fade duration={500} distance="30px" delay={340} fraction={0.4} bottom>
                             <MotionBox
                                 boxSize="100%"
-                                drag="x"
                                 whileHover={{ y:"-10px" }}
                             >
                                 <Image
@@ -94,6 +94,8 @@ const Prologue: React.FC = ({}) => {
                                     objectFit="cover"
                                     borderRadius="md"
                                     cursor="pointer"
+                                    width="full"
+                                    height="full"
                                 />
                             </MotionBox>
                         </Fade>
@@ -116,6 +118,8 @@ const Prologue: React.FC = ({}) => {
                                     objectFit="cover"
                                     borderRadius="md"
                                     cursor="pointer"
+                                    width="full"
+                                    height="full"
                                 />
                             </MotionBox>
                         </Fade>

@@ -12,7 +12,7 @@ const MotionBox = motion.custom(
     }),
 )
 
-const Achievement: React.FC = ({}) => {
+const Song: React.FC = ({}) => {
     return (
         <>
             <Container maxW="7xl" paddingTop={{ base :"7"}} paddingLeft={{ base :"7", md:"20", lg:"15"}} paddingRight={{ base :"7", md:"20", lg:"15"}} paddingBottom={{ base :"20"}} id="prolouge">
@@ -39,21 +39,14 @@ const Achievement: React.FC = ({}) => {
                 >
                     <GridItem rowSpan={3} colSpan={{base:8, md:3}} w="full" textAlign={{base:"center", md:"left"}} h="full">
                         <Fade duration={500} distance="30px" delay={200} fraction={0.4} bottom>
-                            <MotionBox
-                                boxSize="100%"
-                                whileHover={{ y:"-10px" }}
-                            >
-                                <Image
-                                    src="/images/pantai.jpg"
-                                    alt=""
-                                    boxSize="full"
-                                    objectFit="cover"
-                                    borderRadius="md"
-                                    cursor="pointer"
-                                    width="full"
-                                    height="full"
-                                />
-                            </MotionBox>
+                            <Image
+                                src="/images/pantai.jpg"
+                                alt=""
+                                boxSize="full"
+                                objectFit="cover"
+                                borderRadius="md"
+                                cursor="pointer"
+                            />
                         </Fade>
                     </GridItem>
                     <GridItem rowSpan={3} colStart={{base:1,md:4}} colEnd={{base:9,md:8}} h="full" w="full">
@@ -118,4 +111,4 @@ const Achievement: React.FC = ({}) => {
     );
 }
 
-export default Achievement;
+export default Song;
