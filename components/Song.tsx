@@ -34,6 +34,9 @@ const Song: React.FC = ({}) => {
                             <Heading as="h1" letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base :"2xl", md:"3xl", sm:"xl", lg:"4xl"}}>
                                Dipung's favorite song collection
                             </Heading>
+                            <Text letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base :"xs", md:"sm"}}>
+                            Sometimes, you're suggest some song thats i think a good song. Mostly song that are you suggest that's it reminder me of you when i play it. So this is song that you suggest for me.
+                            </Text>
                     </GridItem>
                 </Grid>
                

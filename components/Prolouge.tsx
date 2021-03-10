@@ -16,7 +16,7 @@ const MotionBox = motion.custom(
 const Prologue: React.FC = ({}) => {
     return (
         <>
-            <Container maxW="7xl" paddingTop={{ base :"7"}} paddingLeft={{ base :"7", md:"20", lg:"15"}} paddingRight={{ base :"7", md:"20", lg:"15"}} paddingBottom={{ base :"20"}} id="prolouge">
+            <Container maxW="7xl" paddingTop={{ base :"7"}} paddingLeft={{ base :"7", md:"20", lg:"15"}} paddingRight={{ base :"7", md:"20", lg:"15"}} paddingBottom={{ base :"4",md:"10"}} id="prolouge">
                 <Grid
                     h="min-content"
                     w="full"

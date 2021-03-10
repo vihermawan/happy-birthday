@@ -15,7 +15,7 @@ const MotionBox = motion(
 const Gallery: React.FC = ({}) => {
     return (
         <>
-            <Container maxW="7xl" paddingTop={{ base :"7"}} paddingLeft={{ base :"7", md:"20", lg:"15"}} paddingRight={{ base :"7", md:"20", lg:"15"}} paddingBottom={{ base :"20"}} id="gallery">
+            <Container maxW="7xl" paddingTop={{ base :"7"}} paddingLeft={{ base :"7", md:"20", lg:"15"}} paddingRight={{ base :"7", md:"20", lg:"15"}} paddingBottom={{ base :"4",md:"10"}} id="gallery">
                 <Flex
                     height="full"
                     width="full"
@@ -36,62 +36,125 @@ const Gallery: React.FC = ({}) => {
                     </Fade>
                 </Flex>
                 <Grid
-                    h="600px"
-                    templateRows="repeat(3, 1fr)"
-                    templateColumns="repeat(9, 1fr)"
-                    gap={4}
+                    h="full"
+                    templateRows="repeat(6, 1fr)"
+                    templateColumns="repeat(12, 1fr)"
+                    gap={{base:2,md:4}}
                 >
-                    <GridItem rowSpan={3} colSpan={3}>
-                        <Grid
-                            h="full"
-                            templateRows="repeat(12, 1fr)"
-                            templateColumns="repeat(3, 1fr)"
-                            gap={4}
-                        >
-                            <GridItem rowSpan={3} colSpan={3} bg="red">
-
-                            </GridItem>
-                            <GridItem rowSpan={6} colSpan={3} bg="red">
-                                
-                            </GridItem>
-                            <GridItem rowSpan={3} colSpan={3} bg="red">
-                                
-                            </GridItem>
-                        </Grid>
+                    <GridItem rowSpan={6} colSpan={8} bg="red.300">
+                        <Image
+                            src="/images/foto1.jpg"
+                            alt=""
+                            boxSize="full"
+                            objectFit="cover"
+                            borderRadius="md"
+                            cursor="pointer"
+                            width="full"
+                            height="full"
+                        />
                     </GridItem>
-                    <GridItem rowSpan={3} colSpan={3}>
-                        <Grid
-                            h="full"
-                            templateRows="repeat(12, 1fr)"
-                            templateColumns="repeat(3, 1fr)"
-                            gap={4}
-                        >
-                            <GridItem rowSpan={6} colSpan={3} bg="red">
-
-                            </GridItem>
-                            <GridItem rowSpan={6} colSpan={3} bg="red">
-                                
-                            </GridItem>
-                        </Grid>
+                    <GridItem rowSpan={3} colSpan={4} bg="red.300">
+                         <Image
+                            src="/images/foto1.jpg"
+                            alt=""
+                            boxSize="full"
+                            objectFit="cover"
+                            borderRadius="md"
+                            cursor="pointer"
+                            width="full"
+                            height="full"
+                        />
                     </GridItem>
-                    <GridItem rowSpan={3} colSpan={3}>
-                        <Grid
-                            h="full"
-                            templateRows="repeat(12, 1fr)"
-                            templateColumns="repeat(3, 1fr)"
-                            gap={4}
-                        >
-                            <GridItem rowSpan={3} colSpan={3} bg="red">
-
-                            </GridItem>
-                            <GridItem rowSpan={6} colSpan={3} bg="red">
-                                
-                            </GridItem>
-                            <GridItem rowSpan={3} colSpan={3} bg="red">
-                            
-                            </GridItem>
-                        </Grid>
+                    <GridItem rowSpan={3} colSpan={4} bg="red.300">
+                        <Image
+                            src="/images/foto1.jpg"
+                            alt=""
+                            boxSize="full"
+                            objectFit="cover"
+                            borderRadius="md"
+                            cursor="pointer"
+                            width="full"
+                            height="full"
+                        />
+                     </GridItem>
+                </Grid>
+                <Grid
+                    marginTop={{base:2,md:4}}
+                    h="full"
+                    templateRows="repeat(6, 1fr)"
+                    templateColumns="repeat(12, 1fr)"
+                    w="full"
+                    gap={{base:2,md:4}}
+                >
+                    <GridItem rowSpan={3} colSpan={4}>
+                         <Image
+                            src="/images/foto1.jpg"
+                            alt=""
+                            boxSize="full"
+                            objectFit="cover"
+                            borderRadius="md"
+                            cursor="pointer"
+                            width="full"
+                            height="full"
+                        />
                     </GridItem>
+                    <GridItem rowSpan={6} colSpan={8}>
+                        <Image
+                            src="/images/foto1.jpg"
+                            alt=""
+                            boxSize="full"
+                            objectFit="cover"
+                            borderRadius="md"
+                            cursor="pointer"
+                            width="full"
+                            height="full"
+                        />
+                    </GridItem>
+                    <GridItem rowSpan={3} colSpan={4}>
+                        <Image
+                            src="/images/foto1.jpg"
+                            alt=""
+                            boxSize="full"
+                            objectFit="cover"
+                            borderRadius="md"
+                            cursor="pointer"
+                            width="full"
+                            height="full"
+                        />
+                     </GridItem>
+                </Grid>
+                <Grid
+                    marginTop={{base:2,md:4}}
+                    h="full"
+                    templateRows="repeat(6, 1fr)"
+                    templateColumns="repeat(12, 1fr)"
+                    w="full"
+                    gap={{base:2,md:4}}
+                >
+                    <GridItem rowSpan={6} colSpan={6}>
+                         <Image
+                            src="/images/foto1.jpg"
+                            alt=""
+                            boxSize="full"
+                            objectFit="cover"
+                            borderRadius="md"
+                            cursor="pointer"
+                            width="full"
+                            height="full"
+                        />
+                    </GridItem>
+                    <GridItem rowSpan={6} colSpan={6}>
+                        <Image
+                            src="/images/foto1.jpg"
+                            alt=""
+                            boxSize="full"
+                            objectFit="cover"
+                            borderRadius="md"
+                            cursor="pointer"
+                            width="full"
+                            height="full"
+                        />
+                     </GridItem>
                 </Grid>
             </Container>
         </>
