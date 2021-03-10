@@ -40,7 +40,6 @@ const Gallery: React.FC = ({}) => {
                     templateRows="repeat(3, 1fr)"
                     templateColumns="repeat(9, 1fr)"
                     gap={4}
-                    display={{base:"none", md:"grid"}}
                 >
                     <GridItem rowSpan={3} colSpan={3}>
                         <Grid
