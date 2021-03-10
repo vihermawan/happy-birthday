@@ -59,9 +59,39 @@ const Header: React.FC = props => {
                             Prolouge
                         </LinkScroll>
                     </MenuItems>
-                    <MenuItems>Achievement</MenuItems>
-                    <MenuItems>Gallery</MenuItems>
-                    <MenuItems>Songs</MenuItems>
+                    <MenuItems>
+                        <LinkScroll
+                            activeClass="active"
+                            to="achievement"
+                            spy={true}
+                            smooth={true}
+                            duration={1000}
+                        >
+                        Achievement
+                        </LinkScroll>
+                    </MenuItems>
+                    <MenuItems>
+                        <LinkScroll
+                            activeClass="active"
+                            to="gallery"
+                            spy={true}
+                            smooth={true}
+                            duration={1000}
+                        >
+                        Gallery
+                        </LinkScroll>
+                    </MenuItems>
+                    <MenuItems>
+                        <LinkScroll
+                            activeClass="active"
+                            to="song"
+                            spy={true}
+                            smooth={true}
+                            duration={1000}
+                        >
+                        Songs
+                        </LinkScroll>
+                    </MenuItems>
                 </Box>
                 <Spacer />
                 <Box
@@ -90,9 +120,7 @@ const Header: React.FC = props => {
                         align="center"
                         width="full"
                         wrap="wrap"
-                        heigth
-                        bg={colorMode === "light" ? "white" : "gray.800"}
-                        color={colorMode === "light" ? "black" : "white"}
+                        heigth = "full"
                     >
                          <LinkScroll
                             activeClass="active"
@@ -102,26 +130,26 @@ const Header: React.FC = props => {
                             duration={1000}
                         >
                         <Box as="button" textAlign="left" w="full" display="flex" h="min-content" paddingY="1" justifyContent="center">
-                            <Text color="black" fontSize="xs" paddingX="1" fontWeight="bold"> Prolouge</Text> 
+                            <Text fontSize="xs" paddingX="1" fontWeight="bold"> Prolouge</Text> 
                             <Spacer />
                             <Kbd marginRight="1">D</Kbd>
                         </Box>
                         </LinkScroll>
                         <Divider />
                         <Box as="button" textAlign="left" w="full" display="flex" h="min-content" paddingY="1" justifyContent="center">
-                            <Text color="black" fontSize="xs" paddingX="1" fontWeight="bold"> Achievement</Text> 
+                            <Text fontSize="xs" paddingX="1" fontWeight="bold"> Achievement</Text> 
                             <Spacer />
                             <Kbd marginRight="1">P</Kbd>
                         </Box>
                         <Divider />
                         <Box as="button" textAlign="left" w="full" display="flex" h="min-content" paddingY="1" justifyContent="center">
-                            <Text color="black" fontSize="xs" paddingX="1" fontWeight="bold"> Gallery</Text> 
+                            <Text fontSize="xs" paddingX="1" fontWeight="bold"> Gallery</Text> 
                             <Spacer />
                             <Kbd marginRight="1">N</Kbd>
                         </Box>
                         <Divider />
                         <Box as="button" textAlign="left" w="full" display="flex" h="min-content" paddingY="1" justifyContent="center">
-                            <Text color="black" fontSize="xs" paddingX="1" fontWeight="bold"> Songs</Text> 
+                            <Text fontSize="xs" paddingX="1" fontWeight="bold"> Songs</Text> 
                             <Spacer />
                             <Kbd marginRight="1">G</Kbd>
                         </Box>

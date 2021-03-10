@@ -15,7 +15,7 @@ const MotionBox = motion.custom(
 const Achievement: React.FC = ({}) => {
     return (
         <>
-            <Container maxW="7xl" paddingTop={{ base :"7"}} paddingLeft={{ base :"7", md:"20", lg:"15"}} paddingRight={{ base :"7", md:"20", lg:"15"}} paddingBottom={{ base :"20"}} id="prolouge">
+            <Container maxW="7xl" paddingTop={{ base :"7"}} paddingLeft={{ base :"7", md:"20", lg:"15"}} paddingRight={{ base :"7", md:"20", lg:"15"}} paddingBottom={{ base :"20"}} id="achievement">
                 <Flex
                     height="min-content"
                     width={{base:"full",md:"xl"}}

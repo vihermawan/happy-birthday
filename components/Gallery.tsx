@@ -15,7 +15,7 @@ const MotionBox = motion(
 const Gallery: React.FC = ({}) => {
     return (
         <>
-            <Container maxW="7xl" paddingTop={{ base :"7"}} paddingLeft={{ base :"7", md:"20", lg:"15"}} paddingRight={{ base :"7", md:"20", lg:"15"}} paddingBottom={{ base :"20"}} id="prolouge">
+            <Container maxW="7xl" paddingTop={{ base :"7"}} paddingLeft={{ base :"7", md:"20", lg:"15"}} paddingRight={{ base :"7", md:"20", lg:"15"}} paddingBottom={{ base :"20"}} id="gallery">
                 <Flex
                     height="full"
                     width="full"
@@ -26,7 +26,7 @@ const Gallery: React.FC = ({}) => {
                     <Fade duration={500} distance="30px" delay={200} fraction={0.4} bottom>
                         <Box>
                             <Text letterSpacing={"-.0.01rem"} lineHeight={"-.0.001rem"} fontSize={{ base :"xs", md:"md", lg:"sm"}} fontWeight="bold" textAlign="center">GALLERY 📸</Text>
-                            <Heading as="h1" letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base :"2xl", md:"3xl", sm:"xl", lg:"4xl"}}>
+                            <Heading as="h1" letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base :"2xl", md:"3xl", sm:"xl", lg:"4xl"}} textAlign="center">
                                 Your moment when captured in one take
                             </Heading>
                             <Text letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base :"xs", md:"sm"}} textAlign="center">
@@ -35,7 +35,65 @@ const Gallery: React.FC = ({}) => {
                         </Box>
                     </Fade>
                 </Flex>
-                
+                <Grid
+                    h="600px"
+                    templateRows="repeat(3, 1fr)"
+                    templateColumns="repeat(9, 1fr)"
+                    gap={4}
+                    display={{base:"none", md:"grid"}}
+                >
+                    <GridItem rowSpan={3} colSpan={3}>
+                        <Grid
+                            h="full"
+                            templateRows="repeat(12, 1fr)"
+                            templateColumns="repeat(3, 1fr)"
+                            gap={4}
+                        >
+                            <GridItem rowSpan={3} colSpan={3} bg="red">
+
+                            </GridItem>
+                            <GridItem rowSpan={6} colSpan={3} bg="red">
+                                
+                            </GridItem>
+                            <GridItem rowSpan={3} colSpan={3} bg="red">
+                                
+                            </GridItem>
+                        </Grid>
+                    </GridItem>
+                    <GridItem rowSpan={3} colSpan={3}>
+                        <Grid
+                            h="full"
+                            templateRows="repeat(12, 1fr)"
+                            templateColumns="repeat(3, 1fr)"
+                            gap={4}
+                        >
+                            <GridItem rowSpan={6} colSpan={3} bg="red">
+
+                            </GridItem>
+                            <GridItem rowSpan={6} colSpan={3} bg="red">
+                                
+                            </GridItem>
+                        </Grid>
+                    </GridItem>
+                    <GridItem rowSpan={3} colSpan={3}>
+                        <Grid
+                            h="full"
+                            templateRows="repeat(12, 1fr)"
+                            templateColumns="repeat(3, 1fr)"
+                            gap={4}
+                        >
+                            <GridItem rowSpan={3} colSpan={3} bg="red">
+
+                            </GridItem>
+                            <GridItem rowSpan={6} colSpan={3} bg="red">
+                                
+                            </GridItem>
+                            <GridItem rowSpan={3} colSpan={3} bg="red">
+                            
+                            </GridItem>
+                        </Grid>
+                    </GridItem>
+                </Grid>
             </Container>
         </>
     );

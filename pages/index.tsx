@@ -18,7 +18,7 @@ export default function Home() {
         <Prolouge />
         <Achievement />
         <Gallery />
-        {/* <Song /> */}
+        <Song />
       </Layout>
     </>
   )
