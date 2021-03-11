@@ -1,10 +1,12 @@
 import Head from 'next/head';
-import Layout from "../components/Layout/Layout";
-import Hero from "../components/Hero";
-import Prolouge from "../components/Prolouge";
-import Achievement from "../components/Achievement";
-import Gallery from "../components/Gallery";
-import Song from "../components/Song";
+import dynamic from 'next/dynamic';
+
+const Layout = dynamic(() => import('../components/Layout/Layout'))
+const Hero = dynamic(() => import('../components/Hero'))
+const Prolouge = dynamic(() => import('../components/Prolouge'))
+const Achievement = dynamic(() => import('../components/Achievement'))
+const Gallery = dynamic(() => import('../components/Gallery'))
+const Song = dynamic(() => import('../components/Song'))
 
 export default function Home() {
   return (
