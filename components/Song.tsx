@@ -8,11 +8,11 @@ const Song: React.FC = ({}) => {
     const [playingJ, setPlayingJ] = React.useState<Boolean>(false);
     const [playingH, setPlayingH] = React.useState<Boolean>(false);
     const [playingR, setPlayingR] = React.useState<Boolean>(false);
-    const [play, {stop,isPlaying }] = useSound("/sounds/sound.mp3", {
+    const [play, {stop,isPlaying }] = useSound("/sounds/fix.mp3", {
         sprite : {
-            jeremy : [0,60900],
-            honne : [61000,100000],
-            line : [107000,153000]
+            jeremy : [0,5000],
+            honne : [5000,4000],
+            line : [10000,4000]
         }
     });
 
