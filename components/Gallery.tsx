@@ -43,7 +43,7 @@ const Gallery: React.FC = ({}) => {
                 >
                     <GridItem rowSpan={6} colSpan={8} bg="red.300">
                         <Image
-                            srcSet="/images/foto1.jpg"
+                            srcSet="/images/foto1.webp"
                             alt=""
                             boxSize="full"
                             objectFit="cover"
@@ -55,7 +55,7 @@ const Gallery: React.FC = ({}) => {
                     </GridItem>
                     <GridItem rowSpan={3} colSpan={4} bg="red.300">
                          <Image
-                            src="/images/foto1.jpg"
+                            src="/images/foto1.webp"
                             alt=""
                             boxSize="full"
                             objectFit="cover"
@@ -67,7 +67,7 @@ const Gallery: React.FC = ({}) => {
                     </GridItem>
                     <GridItem rowSpan={3} colSpan={4} bg="red.300">
                         <Image
-                            src="/images/foto1.jpg"
+                            src="/images/foto1.webp"
                             alt=""
                             boxSize="full"
                             objectFit="cover"
@@ -88,7 +88,7 @@ const Gallery: React.FC = ({}) => {
                 >
                     <GridItem rowSpan={3} colSpan={4}>
                          <Image
-                            src="/images/foto1.jpg"
+                            src="/images/foto1.webp"
                             alt=""
                             boxSize="full"
                             objectFit="cover"
@@ -100,7 +100,7 @@ const Gallery: React.FC = ({}) => {
                     </GridItem>
                     <GridItem rowSpan={6} colSpan={8}>
                         <Image
-                            src="/images/foto1.jpg"
+                            src="/images/foto1.webp"
                             alt=""
                             boxSize="full"
                             objectFit="cover"
@@ -112,7 +112,7 @@ const Gallery: React.FC = ({}) => {
                     </GridItem>
                     <GridItem rowSpan={3} colSpan={4}>
                         <Image
-                            src="/images/foto1.jpg"
+                            src="/images/foto1.webp"
                             alt=""
                             boxSize="full"
                             objectFit="cover"
@@ -133,7 +133,7 @@ const Gallery: React.FC = ({}) => {
                 >
                     <GridItem rowSpan={6} colSpan={6}>
                          <Image
-                            src="/images/foto1.jpg"
+                            src="/images/foto1.webp"
                             alt=""
                             boxSize="full"
                             objectFit="cover"
@@ -145,7 +145,7 @@ const Gallery: React.FC = ({}) => {
                     </GridItem>
                     <GridItem rowSpan={6} colSpan={6}>
                         <Image
-                            src="/images/foto1.jpg"
+                            src="/images/foto1.webp"
                             alt=""
                             boxSize="full"
                             objectFit="cover"

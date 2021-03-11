@@ -64,7 +64,7 @@ const Prologue: React.FC = ({}) => {
                                 whileHover={{ y:"-10px" }}
                             >
                                 <Image
-                                    src="/images/foto1.jpg"
+                                    src="/images/foto1.webp"
                                     alt=""
                                     boxSize="full"
                                     objectFit="cover"
@@ -88,7 +88,7 @@ const Prologue: React.FC = ({}) => {
                                 whileHover={{ y:"-10px" }}
                             >
                                 <Image
-                                    src="/images/foto2.jpg"
+                                    src="/images/foto2.webp"
                                     alt=""
                                     boxSize="full"
                                     objectFit="cover"
@@ -112,7 +112,7 @@ const Prologue: React.FC = ({}) => {
                                 whileHover={{ y:"-10px" }}
                             >
                                 <Image
-                                    src="/images/foto3.jpg"
+                                    src="/images/foto3.webp"
                                     alt=""
                                     boxSize="full"
                                     objectFit="cover"

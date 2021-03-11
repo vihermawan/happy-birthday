@@ -44,7 +44,7 @@ const Achievement: React.FC = ({}) => {
                                 whileHover={{ y:"-10px" }}
                             >
                                 <Image
-                                    src="/images/pantai.jpg"
+                                    src="/images/pantai.webp"
                                     alt=""
                                     boxSize="full"
                                     objectFit="cover"
