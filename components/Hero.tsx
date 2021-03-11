@@ -54,7 +54,7 @@ const Hero: React.FC = ({}) => {
                 <Fade duration={500} distance="30px" fraction={0.4} bottom>
                     <Box mt={{base:"44", md:"28", lg:"0"}}>
                         <Heading as="h1" letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base :"2xl", md:"3xl", sm:"xl", lg:"7xl"}}>
-                            Today is your day, so be happy and grateful 🎉<br/> <Link className={style.transition} bgClip="text">Happy Birthday Dipung !</Link> 
+                            Today is your day, so be happy and grateful 🎉<br/> <Text className={style.transition} bgClip="text" href="">Happy Birthday Dipung !</Text> 
                         </Heading>
                     </Box>
                 </Fade>
