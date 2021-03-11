@@ -12,6 +12,12 @@ export default function Home() {
       <Head>
         <title>Happy Birthday-🎉</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:title" content="This Website is a gift ❤️" key="title" />
+      </Head>
+      <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:title" content="This Website is a gift ❤️" key="title" />
       </Head>
       <Layout>
         <Hero />

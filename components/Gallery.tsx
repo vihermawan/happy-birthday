@@ -43,7 +43,7 @@ const Gallery: React.FC = ({}) => {
                 >
                     <GridItem rowSpan={6} colSpan={8} bg="red.300">
                         <Image
-                            src="/images/foto1.jpg"
+                            srcSet="/images/foto1.jpg"
                             alt=""
                             boxSize="full"
                             objectFit="cover"
