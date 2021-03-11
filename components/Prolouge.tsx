@@ -72,6 +72,9 @@ const Prologue: React.FC = ({}) => {
                                     cursor="pointer"
                                     width="full"
                                     height="full"
+                                    minH="full"
+                                    minW="full"
+                                    boxSizing="border-box"
                                 />
                             </MotionBox>
                         </Fade>
@@ -91,11 +94,13 @@ const Prologue: React.FC = ({}) => {
                                     src="/images/foto2.webp"
                                     alt=""
                                     boxSize="full"
-                                    objectFit="cover"
                                     borderRadius="md"
                                     cursor="pointer"
                                     width="full"
                                     height="full"
+                                    minH="full"
+                                    minW="full"
+                                    boxSizing="border-box"
                                 />
                             </MotionBox>
                         </Fade>
@@ -115,11 +120,13 @@ const Prologue: React.FC = ({}) => {
                                     src="/images/foto3.webp"
                                     alt=""
                                     boxSize="full"
-                                    objectFit="cover"
                                     borderRadius="md"
                                     cursor="pointer"
                                     width="full"
                                     height="full"
+                                    minH="full"
+                                    minW="full"
+                                    boxSizing="border-box"
                                 />
                             </MotionBox>
                         </Fade>
