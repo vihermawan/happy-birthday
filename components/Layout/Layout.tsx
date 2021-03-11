@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import Footer from "./Footer";
 import SrcollTop from "../button/ScrolTop";
 
 const Layout: React.FC = ({children}) => {
@@ -8,6 +9,7 @@ const Layout: React.FC = ({children}) => {
             <Header />
             {children}
             <SrcollTop/>
+            <Footer />
         </>
     );
 };
