@@ -1,6 +1,6 @@
 import * as React from "react";
 import Fade from 'react-reveal/Fade';
-import { Container, Box, Heading, Grid, Text, GridItem,Image,forwardRef,Flex,Button} from "@chakra-ui/react";
+import { Container, Box, Heading, Grid, Text, GridItem,forwardRef,Flex,Img} from "@chakra-ui/react";
 import { motion, isValidMotionProp } from "framer-motion";
 
 const MotionBox = motion(
@@ -42,7 +42,7 @@ const Gallery: React.FC = ({}) => {
                     gap={{base:2,md:4}}
                 >
                     <GridItem rowSpan={6} colSpan={8} bg="red.300">
-                        <Image
+                        <Img
                             srcSet="/images/foto1.webp"
                             alt=""
                             boxSize="full"
@@ -54,7 +54,7 @@ const Gallery: React.FC = ({}) => {
                         />
                     </GridItem>
                     <GridItem rowSpan={3} colSpan={4} bg="red.300">
-                         <Image
+                         <Img
                             src="/images/foto1.webp"
                             alt=""
                             boxSize="full"
@@ -66,7 +66,7 @@ const Gallery: React.FC = ({}) => {
                         />
                     </GridItem>
                     <GridItem rowSpan={3} colSpan={4} bg="red.300">
-                        <Image
+                        <Img
                             src="/images/foto1.webp"
                             alt=""
                             boxSize="full"
@@ -87,7 +87,7 @@ const Gallery: React.FC = ({}) => {
                     gap={{base:2,md:4}}
                 >
                     <GridItem rowSpan={3} colSpan={4}>
-                         <Image
+                         <Img
                             src="/images/foto1.webp"
                             alt=""
                             boxSize="full"
@@ -99,7 +99,7 @@ const Gallery: React.FC = ({}) => {
                         />
                     </GridItem>
                     <GridItem rowSpan={6} colSpan={8}>
-                        <Image
+                        <Img
                             src="/images/foto1.webp"
                             alt=""
                             boxSize="full"
@@ -111,7 +111,7 @@ const Gallery: React.FC = ({}) => {
                         />
                     </GridItem>
                     <GridItem rowSpan={3} colSpan={4}>
-                        <Image
+                        <Img
                             src="/images/foto1.webp"
                             alt=""
                             boxSize="full"
@@ -132,7 +132,7 @@ const Gallery: React.FC = ({}) => {
                     gap={{base:2,md:4}}
                 >
                     <GridItem rowSpan={6} colSpan={6}>
-                         <Image
+                         <Img
                             src="/images/foto1.webp"
                             alt=""
                             boxSize="full"
@@ -144,7 +144,7 @@ const Gallery: React.FC = ({}) => {
                         />
                     </GridItem>
                     <GridItem rowSpan={6} colSpan={6}>
-                        <Image
+                        <Img
                             src="/images/foto1.webp"
                             alt=""
                             boxSize="full"
